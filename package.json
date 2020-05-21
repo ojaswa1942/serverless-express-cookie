@@ -6,7 +6,7 @@
 		"nodemon": "^2.0.4"
 	},
 	"scripts": {
-		"local": "nodemon functions/server.local.js"
+		"local": "nodemon functions/server-local.js"
 	},
 	"repository": {
 		"type": "git",
