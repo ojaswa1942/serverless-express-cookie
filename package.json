@@ -2,8 +2,12 @@
 	"name": "netlify-serverless-cookie",
 	"version": "1.0.0",
 	"main": "index.js",
-	"devDependencies": {},
-	"scripts": {},
+	"devDependencies": {
+		"nodemon": "^2.0.4"
+	},
+	"scripts": {
+		"local": "nodemon functions/server.local.js"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/ojaswa-privado/netlify-serverless-cookie.git"

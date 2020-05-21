@@ -1,5 +1,4 @@
 const express = require('express');
-const awsServerlessExpress = require('aws-serverless-express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -13,10 +12,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 
-app.use('/.netlify/functions/server', routes);
+app.use('/', routes);
 
-const server = awsServerlessExpress.createServer(app);
-
-exports.handler = (event, context) => {
-    awsServerlessExpress.proxy(server, event, context);
-}
+const PORT = process.env.PORT || 3001
+app.listen(PORT, ()=>{
+    console.log(`Functions at root (localhost:${PORT}/)`);
+    console.log(`We are on on port ${PORT}!`);
+});
