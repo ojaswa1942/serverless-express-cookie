@@ -10,6 +10,7 @@ const cookieConfig = {
 const randomBinary = Math.random().toString(2).substr(2, 50);
 
 routes.get(`/`, (req, res) => res.status(200).json("This is JSON Response"));
+
 routes.get(`/jsonHeader`, (req, res) => {
     return res.status(200)
     .cookie("jsonHeader", randomBinary, cookieConfig)
@@ -17,6 +18,5 @@ routes.get(`/jsonHeader`, (req, res) => {
 });
 
 routes.use('/scripts', scriptRoutes);
-
 
 module.exports = routes;
