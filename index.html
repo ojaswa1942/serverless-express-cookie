@@ -7,7 +7,7 @@
             font-family: Helvetica;
         }
         .dataEntry {
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 400px 1fr;
             display: grid;
             align-items: center;
             padding: 10px;
@@ -46,7 +46,7 @@
                 GET /
             </a>
             <span class="desc"> 
-                Receive pure JSON response
+                Returns pure JSON response
             </span>
         </div>
 
@@ -55,12 +55,67 @@
                 GET /jsonHeader
             </a>
             <span class="desc" > 
-                Receive JSON Response with Set-Header Cookie 
+                Returns JSON Response with Set-Cookie Header 
+            </span>
+        </div>
+
+        <div class="dataEntry">
+            <a href="/.netlify/functions/server/scripts/jsonScript" target="_blank" class="endpoint" >
+                GET /scripts/jsonScript
+            </a>
+            <span class="desc" > 
+                Returns a script which makes a call to GET /. Can be included in Script source attribute.
+            </span>
+        </div>
+
+        <div class="dataEntry">
+            <a href="/.netlify/functions/server/scripts/jsonHeaderScript" target="_blank" class="endpoint" >
+                GET /scripts/jsonHeaderScript
+            </a>
+            <span class="desc" > 
+                Returns a script which makes a call to GET /jsonHeader. Can be included in Script source attribute.
+            </span>
+        </div>
+
+        <div class="dataEntry">
+            <a href="/.netlify/functions/server/scripts/scriptRaw" target="_blank" class="endpoint" >
+                GET /scripts/scriptRaw
+            </a>
+            <span class="desc" > 
+                Returns a JavaScript file. Can be included in Script source attribute.
+            </span>
+        </div>
+
+        <div class="dataEntry">
+            <a href="/.netlify/functions/server/scripts/scriptHeader" target="_blank" class="endpoint" >
+                GET /scripts/scriptHeader
+            </a>
+            <span class="desc" > 
+                Returns a JavaScript file with Set-Cookie Header. Can be included in Script source attribute.
+            </span>
+        </div>
+
+        <div class="dataEntry">
+            <a href="/.netlify/functions/server/scripts/scriptExplicit" target="_blank" class="endpoint" >
+                GET /scripts/scriptExplicit
+            </a>
+            <span class="desc" > 
+                Returns a JavaScript file which explicitly sets cookie using "document.cookie". Can be included in Script source attribute.
+            </span>
+        </div>
+
+        <div class="dataEntry">
+            <a href="/.netlify/functions/server/scripts/scriptHeaderAndExplicit" target="_blank" class="endpoint" >
+                GET /scripts/scriptHeaderAndExplicit
+            </a>
+            <span class="desc" > 
+                Returns a JavaScript file with Set-Cookie Header which also explicitly sets cookie using "document.cookie". Can be included in Script source attribute.
             </span>
         </div>
 
     </div>
 </body>
+
 <script type="text/javascript">
     fetch('https://cookietest-domain2.netlify.app/.netlify/functions/server/jsonHeader', {
         method: 'GET',
