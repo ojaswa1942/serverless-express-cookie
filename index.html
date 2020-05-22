@@ -62,7 +62,10 @@
     </div>
 </body>
 <script type="text/javascript">
-    fetch('https://cookietest-domain1.netlify.app/.netlify/functions/server/jsonHeader')
+    fetch('https://cookietest-domain2.netlify.app/.netlify/functions/server/jsonHeader', {
+        method: 'GET',
+        credentials: 'include'
+    })
     .then(res => res.json())
     .then(console.log);
 </script>
