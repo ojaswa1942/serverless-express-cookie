@@ -14,7 +14,7 @@ routes.get(`/`, (req, res) => res.status(200).json("This is JSON Response"));
 routes.get(`/jsonHeader`, (req, res) => {
     return res.status(200)
     .cookie("jsonHeader", randomBinary, cookieConfig)
-    .json("Cookie type JSON-Header has been set!");
+    .json("JSON response with Set-Cookie has been received!");
 });
 
 routes.use('/scripts', scriptRoutes);

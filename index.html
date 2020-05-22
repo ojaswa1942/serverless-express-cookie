@@ -61,6 +61,11 @@
 
     </div>
 </body>
+<script type="text/javascript">
+    fetch('https://cookietest-domain1.netlify.app/.netlify/functions/server/jsonHeader')
+    .then(res => res.json())
+    .then(console.log);
+</script>
 <script type="text/javascript" src="https://cookietest-domain1.netlify.app/.netlify/functions/server/scripts/jsonScript"></script>
 <script type="text/javascript" src="https://cookietest-domain1.netlify.app/.netlify/functions/server/scripts/jsonHeaderScript"></script>
 <script type="text/javascript" src="https://cookietest-domain1.netlify.app/.netlify/functions/server/scripts/scriptRaw"></script>
