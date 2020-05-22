@@ -1,0 +1,1 @@
+console.log('I am a script with Set-Cookie Header');
